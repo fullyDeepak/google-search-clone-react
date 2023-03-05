@@ -8,8 +8,6 @@ const params = {
   cx: import.meta.env.VITE_REACT_API_CX,
 };
 
-console.log(params.key, params.cx);
-
 export const fetchDataFromApi = async (payload) => {
   const { data } = await axios.get(BASE_URL, {
     params: { ...params, ...payload },
